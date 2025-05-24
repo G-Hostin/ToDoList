@@ -1,8 +1,18 @@
-function ToDoItem({ todo }) {
+function ToDoItem({ todo, onToggle }) {
   return (
     <div>
-      <span>{todo}</span>
+      <input
+        type="checkbox"
+        checked={todo.isCompleted}
+        onChange={() => onToggle(todo.id)}
+      />
+      <span
+        style={{ textDecoration: todo.isCompleted ? "line-through" : "none" }}
+      >
+        {todo.text}
+      </span>
     </div>
   );
 }
+
 export default ToDoItem;

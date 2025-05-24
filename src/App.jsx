@@ -12,6 +12,13 @@ function App() {
     setFilter(newFilter);
   };
 
+  const toggleTodo = (id) => {
+    const updatedTodos = todo.map((t) =>
+      t.id === id ? { ...t, isCompleted: !t.isCompleted } : t
+    );
+    setTodo(updatedTodos);
+  };
+
   const addTodo = (text) => {
     const newTodo = {
       id: Date.now(),
@@ -34,7 +41,7 @@ function App() {
       {filteredTodos.map((todo) => {
         return (
           <li key={todo.id}>
-            <ToDoItem todo={todo.text} />
+            <ToDoItem todo={todo} onToggle={toggleTodo} />
           </li>
         );
       })}
