@@ -63,10 +63,18 @@ function App() {
     setTodo(deletedTodo); //On met à jour le tableau todo avec deletedTodo qui ne contient plus l'élément supprimé
   };
 
+  const deleteCompleted = () => {
+    const activeTasks = todo.filter((t) => {
+      if (!t.isCompleted) return true;
+    });
+    setTodo(activeTasks);
+  };
+
   return (
     <div>
       <h1>ToDo List :</h1>
       <ToDoForm onAdd={addTodo} />
+      {filteredTodos.length === 0 && <p>Aucune tâche à afficher</p>}
       {filteredTodos.map((todo) => {
         return (
           <li key={todo.id}>
@@ -74,7 +82,10 @@ function App() {
           </li>
         );
       })}
-      <ToDoFilters onFilterChange={handleFilterChange} />
+      <ToDoFilters
+        onFilterChange={handleFilterChange}
+        deleteAllCompleted={deleteCompleted}
+      />
     </div>
   );
 }
