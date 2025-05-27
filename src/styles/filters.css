@@ -13,3 +13,10 @@
 .todofilters button:hover {
   background-color: #555;
 }
+
+/* ✳️ Style du bouton actif */
+.todofilters button.active {
+  background-color: #5c6bc0; /* Bleu léger pour contraste */
+  font-weight: bold;
+  border: 1px solid #7986cb;
+}

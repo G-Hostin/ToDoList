@@ -74,6 +74,14 @@ function App() {
     setTodo(activeTasks);
   };
 
+  const tasksCompleted = todo.filter((t) => {
+    return t.isCompleted;
+  });
+
+  const tasksActive = todo.filter((t) => {
+    return !t.isCompleted;
+  });
+
   return (
     <div className="todoapp">
       <div className="todotitle">
@@ -96,6 +104,10 @@ function App() {
         <ToDoFilters
           onFilterChange={handleFilterChange}
           deleteAllCompleted={deleteCompleted}
+          numberTasks={todo.length}
+          numberCompleted={tasksCompleted.length}
+          numberActive={tasksActive.length}
+          activeFilter={filter}
         />
       </div>
     </div>

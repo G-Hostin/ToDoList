@@ -14,7 +14,6 @@ function ToDoForm({ onAdd }) {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        {" "}
         {/*On appelle la fonction de gestion du submit*/}
         <input
           type="text"
