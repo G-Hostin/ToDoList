@@ -104,6 +104,11 @@ Tu peux forker ce dépôt, proposer des améliorations ou même signaler des bug
 
 Welcome to this **modern ToDo List** project, developed with **React** and **Vite**. This application allows you to manage your daily tasks simply and efficiently, with a clean **dark mode** interface.
 
+
+[![Vercel](https://img.shields.io/badge/Deployment-Vercel-3f51b5?logo=vercel&logoColor=white)](https://todo-ghostin.vercel.app)
+
+🔗 **Live demo**: [todo-ghostin.vercel.app](https://todo-ghostin.vercel.app)
+
 ---
 
 ## ✨ Features
