@@ -2,6 +2,11 @@
 
 Bienvenue sur ce projet de **ToDo List moderne**, développé en **React** avec **Vite**. Cette application vous permet de gérer vos tâches quotidiennes simplement et efficacement, avec une interface épurée en **mode sombre**.
 
+
+[![Vercel](https://img.shields.io/badge/Déploiement-Vercel-3f51b5?logo=vercel&logoColor=white)](https://todo-ghostin.vercel.app)
+
+🔗 **Lien vers l’application en ligne** : [todo-ghostin.vercel.app](https://todo-ghostin.vercel.app)
+
 ---
 
 ## ✨ Fonctionnalités
