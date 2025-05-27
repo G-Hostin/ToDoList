@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
-import "./styles/App.css";
+import "./styles/base.css";
+import "./styles/layout.css";
+import "./styles/form.css";
+import "./styles/list.css";
+import "./styles/filters.css";
 import ToDoForm from "./components/ToDoForm";
 import ToDoItem from "./components/ToDoItem";
 import ToDoFilters from "./components/ToDoFilters";
@@ -71,21 +75,29 @@ function App() {
   };
 
   return (
-    <div>
-      <h1>ToDo List :</h1>
-      <ToDoForm onAdd={addTodo} />
-      {filteredTodos.length === 0 && <p>Aucune tâche à afficher</p>}
-      {filteredTodos.map((todo) => {
-        return (
-          <li key={todo.id}>
-            <ToDoItem todo={todo} onToggle={toggleTodo} onDelete={onDelete} />
-          </li>
-        );
-      })}
-      <ToDoFilters
-        onFilterChange={handleFilterChange}
-        deleteAllCompleted={deleteCompleted}
-      />
+    <div className="todoapp">
+      <div className="todotitle">
+        <h1>ToDo List :</h1>
+      </div>
+      <div className="todoform">
+        <ToDoForm onAdd={addTodo} />
+      </div>
+      <div className="todolist">
+        {filteredTodos.length === 0 && <p>Aucune tâche à afficher</p>}
+        {filteredTodos.map((todo) => {
+          return (
+            <li key={todo.id}>
+              <ToDoItem todo={todo} onToggle={toggleTodo} onDelete={onDelete} />
+            </li>
+          );
+        })}
+      </div>
+      <div className="todofilters">
+        <ToDoFilters
+          onFilterChange={handleFilterChange}
+          deleteAllCompleted={deleteCompleted}
+        />
+      </div>
     </div>
   );
 }

@@ -1,0 +1,28 @@
+/* form.css */
+.todoform form {
+  display: flex;
+  gap: 1rem;
+}
+
+.todoform input[type="text"] {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #2c2c2c;
+  color: #fff;
+}
+
+.todoform button {
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.todoform button:hover {
+  background-color: #5c6bc0;
+}

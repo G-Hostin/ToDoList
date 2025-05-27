@@ -1,0 +1,40 @@
+/* list.css */
+.todolist li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2a2a2a;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+}
+
+.todolist li input[type="checkbox"] {
+  margin-right: 1rem;
+  transform: scale(1.2);
+}
+
+.todolist li span {
+  flex: 1;
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+.todolist li button {
+  background-color: #e53935;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  color: white;
+  border-radius: 4px;
+}
+
+.todolist li button:hover {
+  background-color: #f44336;
+}
+
+.todolist p {
+  text-align: center;
+  font-style: italic;
+  opacity: 0.8;
+}

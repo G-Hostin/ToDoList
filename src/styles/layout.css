@@ -1,0 +1,23 @@
+/* layout.css */
+.todoapp {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #1e1e1e;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.todotitle {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.todolist {
+  margin-top: 1rem;
+}
+
+.todofilters {
+  margin-top: 2rem;
+  text-align: center;
+}
